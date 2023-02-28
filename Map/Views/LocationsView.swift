@@ -29,6 +29,9 @@ struct LocationsView: View {
 
             }
         }
+        .sheet(item: $vm.sheetLocation, onDismiss: nil) { location in //really for the value in item parameter
+            LocationDetailView(location: location)
+        }
     }
 }
 
